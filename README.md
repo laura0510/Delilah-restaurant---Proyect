@@ -12,4 +12,9 @@ Esto incluye la creación de servidor, autenticación de usuarios y conexión co
     "mysql2": "^2.1.0",
     "nodemon": "^2.0.3",
     "parser": "^0.1.4",
-    "sequelize": "^5.21.7"
+    "sequelize": "^5.21.7",
+
+
+##CONFIGURACION
+Crear base de datos desde MYSQL
+Ejecutar el servidor del puerto 3000

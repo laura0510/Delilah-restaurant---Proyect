@@ -1,6 +1,6 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
-const jwtFirma = 'misupercontrasenaparaencriptartoken';
+const jwtFirma = "misupercontrasenaparaencriptartoken";
 const tokenManejador = {};
 
 tokenManejador.crearToken = usuario => jwt.sign(usuario, jwtFirma);

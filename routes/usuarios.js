@@ -1,16 +1,20 @@
 const router = require("express").Router();
 const Usuario = require("../models/Usuario");
 const tokenManejador = require("../utils/tokenManejador");
-const validarToken = require("../middlewares/validarToken");
+// const validarToken = require("../middlewares/validarToken");
 
 
 router.route("/")
-	.get(validarToken, async (req, res) => {
+	.get( async (req, res) => {
 		const usuarios = await Usuario.obtenerTodos();
 		res.json(usuarios);
 	})
-	.post(validarToken, (req, res) => {
-		res.json("post usuario");
+	.post( async (req, res) => {
+		const { usuario, nombre, email, telefono, direccion, contrasena } = req.body;
+		const data = { usuario, nombre, email, telefono, direccion };
+		await Usuario.crear(usuario, nombre, email, telefono, direccion, contrasena);
+		const token = tokenManejador.crearToken(data);
+		res.json(token);
 	});
 
 router.route("/login")

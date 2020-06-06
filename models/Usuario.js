@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("mysql://master_acamica:Acamica123@automosaiko.tk:3306/master_acamica");
+const sequelize = new Sequelize("mysql://master_laura:Acamica123@automosaiko.tk:3306/master_laura");
 
 const Usuario = {};
 
@@ -19,7 +19,7 @@ Usuario.obtenerTodos = async () => {
 };
 
 Usuario.autenticar = async (usuario, contrasena) => {
-	const result = await sequelize.query("SELECT usuario, nombre, correo, telefono, direccion FROM usuarios WHERE usuario=? AND contrasena=?", {
+	const result = await sequelize.query("SELECT usuario, nombre, email, telefono, direccion FROM usuarios WHERE usuario=? AND contrasena=?", {
 		type: sequelize.QueryTypes.SELECT,
 		replacements: [usuario, contrasena]
 	});
