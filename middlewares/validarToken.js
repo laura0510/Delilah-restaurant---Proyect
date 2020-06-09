@@ -1,11 +1,39 @@
 const tokenManejador = require("../utils/tokenManejador");
 
-module.exports = function(req, res, next) {
+const checkToken = (req, res, next) => {
+	const token = req.header("authorization");
+	if (!token) return res.status(400).json("Acceso denegado");
 	try {
-		const usuario = tokenManejador.validarToken(req.headers.authorization);
-		req.usuarioLogueado = usuario;
+		req.usuarioLogueado = tokenManejador.validarToken(token);
 		next();
-	} catch (error) {
-		res.status(400).json("Acceso denegado");
+	} catch (e) {
+		res.status(401).json("No tienes permisos para realizar esta acción");
 	}
+
+};
+
+const verificarRolAdministrador = (req, res, next) => {
+	const usuario = req.usuarioLogueado;
+
+	if (usuario.es_admin === 1) {
+		next();
+	} else {
+		return  res.status(403).json("No tienes permisos para realizar esta acción");
+	}
+};
+
+const verificarRolCliente = (req, res, next) => {
+	const usuario = req.usuarioLogueado;
+
+	if (usuario.es_admin === 0) {
+		next();
+	} else {
+		return  res.status(403).json("No tienes permisos para realizar esta acción");
+	}
+};
+
+module.exports = {
+	checkToken,
+	verificarRolAdministrador,
+	verificarRolCliente
 };

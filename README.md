@@ -18,3 +18,10 @@ Esto incluye la creación de servidor, autenticación de usuarios y conexión co
 ##CONFIGURACION
 Crear base de datos desde MYSQL
 Ejecutar el servidor del puerto 3000
+
+como middlewares: 
+1.validarToken: Donde se verifica el token, rol administrador y rol cliente
+2.verificarUsuario: autorización
+
+correr la API 
+node index.js

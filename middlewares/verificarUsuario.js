@@ -15,12 +15,3 @@ try {
     res.status(404).json("token invalido");
     }
 }
-
-verificarUsuario = async(req, res, next) => {
-    const {usuario, contrasena} = req.body;
-    const result = await sequelize.query("SELECT usuario, nombre, email, telefono, direccion FROM usuarios", {
-		type: sequelize.QueryTypes.SELECT
-	});
-	return result;
-};
-}

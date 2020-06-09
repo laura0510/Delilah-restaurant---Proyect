@@ -18,4 +18,5 @@ app.listen(app.get("port"), () => {
 
 //routes 
 app.use("/api/usuarios", require("./routes/usuarios"));
-
+app.use("/api/productos", require("./routes/productos"));
+app.use("/api/pedidos", require("./routes/pedidos"));
