@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "da348a10-1420-4863-be0f-aa0ea49375bf",
+		"name": "Laura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"item": [
+				{
+					"name": "localhost:3000/api/usuarios/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"laura01\",\n\t\"contrasena\":\"laura90\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuarios/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarios",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/usuarios/obtener_usuarios",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/usuarios/obtener_usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarios",
+								"obtener_usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/usuarios/actualizar_usuario",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"Richard\",\n\t\"nombre\":\"Pepe 24\",\n\t\"email\":\"pepe@pepe.com\",\n\t\"telefono\": \"1234\",\n\t\"direccion\": \"calle121\",\n\t\"contrasena\": \"1234\",\n\t\"es_admin\": 1,\n\t\"oldUser\":\"Richard\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuarios/actualizar_usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarios",
+								"actualizar_usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/usuarios/eliminar_usuario?usuario=anagom",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/usuarios/eliminar_usuario?usuario=anagom",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarios",
+								"eliminar_usuario"
+							],
+							"query": [
+								{
+									"key": "usuario",
+									"value": "anagom"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/usuarios/crear_usuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\": \"Daniel\",\n\t\"nombre\":\"Daniel 24\",\n\t\"email\":\"Daniel@pepe.com\",\n\t\"telefono\": \"1234\",\n\t\"direccion\": \"calle121\",\n\t\"contrasena\": \"1234\",\n\t\"es_admin\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/usuarios/crear_usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"usuarios",
+								"crear_usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "productos",
+			"item": [
+				{
+					"name": "localhost:3000/api/productos/obtener_productos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/productos/obtener_productos",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos",
+								"obtener_productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/productos/crear_producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombreProducto\":\"Carne\",\n\t\"precioProducto\": 10000,\n\t\"descripcion\": \"Carne asada\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/productos/crear_producto",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos",
+								"crear_producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/productos/eliminar_producto?idProducto=6",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/productos/eliminar_producto?idProducto=6",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos",
+								"eliminar_producto"
+							],
+							"query": [
+								{
+									"key": "idProducto",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/productos/actualizar_producto?idProducto=7",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombreProducto\":\"Carne asada\",\n\t\"precioProducto\": 20000,\n\t\"descripcion\": \"Papas azuca y pan calienter\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/productos/actualizar_producto?idProducto=7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos",
+								"actualizar_producto"
+							],
+							"query": [
+								{
+									"key": "idProducto",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/productos/obtener_productoX_id?idProducto=7",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjEsImlhdCI6MTU5MTQ4OTc5Mn0.XOuuGRrp3L1pGaiEmWBJlehyZbPHR00vBOdoC5OZUQw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/productos/obtener_productoX_id?idProducto=7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos",
+								"obtener_productoX_id"
+							],
+							"query": [
+								{
+									"key": "idProducto",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "pedidos",
+			"item": [
+				{
+					"name": "localhost:3000/api/pedidos/crear_pedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJ1c3VhcmlvIjoiUmljaGFyZCIsIm5vbWJyZSI6IlBlcGUgMjQiLCJlbWFpbCI6InBlcGVAcGVwZS5jb20iLCJ0ZWxlZm9ubyI6IjEyMzQiLCJkaXJlY2Npb24iOiJjYWxsZTEyMSIsImVzX2FkbWluIjoxLCJpYXQiOjE1OTE0OTA2NzN9.ondhrCnr0DCpQ_tgngn4DCpe2L0DjoT2BEaDvPgIVr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descripcionPedidos\": \"medianas\",\n\t\"metodoPago\":\"Electronico\",\n\t\"total\": 20000,\n\t\"idProducto\": 7\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/pedidos/crear_pedido",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedidos",
+								"crear_pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/pedidos/eliminar_pedido?idPedido=8",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJ1c3VhcmlvIjoiUmljaGFyZCIsIm5vbWJyZSI6IlBlcGUgMjQiLCJlbWFpbCI6InBlcGVAcGVwZS5jb20iLCJ0ZWxlZm9ubyI6IjEyMzQiLCJkaXJlY2Npb24iOiJjYWxsZTEyMSIsImVzX2FkbWluIjoxLCJpYXQiOjE1OTE0OTA2NzN9.ondhrCnr0DCpQ_tgngn4DCpe2L0DjoT2BEaDvPgIVr8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/pedidos/eliminar_pedido?idPedido=8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedidos",
+								"eliminar_pedido"
+							],
+							"query": [
+								{
+									"key": "idPedido",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/pedidos/actualizar_pedido?idPedido=7",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJ1c3VhcmlvIjoiUmljaGFyZCIsIm5vbWJyZSI6IlBlcGUgMjQiLCJlbWFpbCI6InBlcGVAcGVwZS5jb20iLCJ0ZWxlZm9ubyI6IjEyMzQiLCJkaXJlY2Npb24iOiJjYWxsZTEyMSIsImVzX2FkbWluIjoxLCJpYXQiOjE1OTE0OTA2NzN9.ondhrCnr0DCpQ_tgngn4DCpe2L0DjoT2BEaDvPgIVr8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcionPedidos\": \"medianas\",\n    \"metodoPago\": \"Electronico\",\n    \"total\": 20000,\n    \"idProducto\": 7,\n    \"estado\": \"Entregado\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/pedidos/actualizar_pedido?idPedido=7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedidos",
+								"actualizar_pedido"
+							],
+							"query": [
+								{
+									"key": "idPedido",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/pedidos//ultimo_pedido_usuario",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo1LCJ1c3VhcmlvIjoibGF1cmEwMSIsIm5vbWJyZSI6IkxhdXJhTG9wZXoiLCJlbWFpbCI6ImxhdXJhQGhvdG1haWwuY29tIiwidGVsZWZvbm8iOiI5ODcwMDA3MjMiLCJkaXJlY2Npb24iOiJzYW50YW5kZXIgc3RyZWV0IiwiZXNfYWRtaW4iOjAsImlhdCI6MTU5MTQ5MTE2M30.E4kVXbYCWtxbFePSH6tfsTmB7qCK5C4H1sBKp4k-ymY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/pedidos//ultimo_pedido_usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"pedidos",
+								"",
+								"ultimo_pedido_usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
